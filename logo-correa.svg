@@ -1,7 +1,0 @@
-<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="128" cy="128" r="120" fill="#0B0B0D" stroke="#F5F5F7" stroke-width="8"/>
-  <circle cx="128" cy="128" r="86" fill="none" stroke="#2A2A33" stroke-width="6"/>
-  <path d="M128 58L138 78L160 81L144 96L148 118L128 108L108 118L112 96L96 81L118 78L128 58Z" fill="#F5F5F7"/>
-  <text x="128" y="150" text-anchor="middle" fill="#F5F5F7" font-family="Montserrat, Arial, sans-serif" font-size="42" font-weight="700" letter-spacing="4">CJJ</text>
-  <text x="128" y="180" text-anchor="middle" fill="#B8B8C2" font-family="Montserrat, Arial, sans-serif" font-size="12" letter-spacing="3">CORREA JIU JITSU</text>
-</svg>
