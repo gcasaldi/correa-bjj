@@ -4,8 +4,8 @@
   --surface: #1c1c22;
   --text: #f5f5f7;
   --muted: #b8b8c2;
-  --gold: #d4af37;
-  --gold-dark: #b7922c;
+  --gold: #f5f5f7;
+  --gold-dark: #e4e4ea;
   --border: #2a2a33;
   --max: 1140px;
 }
@@ -91,6 +91,17 @@ a {
   background: var(--gold-dark);
 }
 
+.cta-outline {
+  margin-left: 0.65rem;
+  background: transparent;
+  color: var(--text);
+  border-color: var(--gold);
+}
+
+.cta-outline:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
 .hero {
   position: relative;
   min-height: 82vh;
@@ -99,13 +110,13 @@ a {
   border-bottom: 1px solid var(--border);
 }
 
-.hero-image,
+.hero-video,
 .hero-overlay {
   position: absolute;
   inset: 0;
 }
 
-.hero-image {
+.hero-video {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -165,6 +176,52 @@ h2 {
   margin-bottom: 1.4rem;
 }
 
+.instagram-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin: 1rem 0 1.2rem;
+}
+
+.instagram-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.ig-card {
+  display: block;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  min-height: 180px;
+}
+
+.ig-card img {
+  width: 100%;
+  height: 100%;
+  min-height: 180px;
+  object-fit: cover;
+  transition: transform 0.25s ease;
+}
+
+.ig-card:hover img {
+  transform: scale(1.03);
+}
+
+.ig-fallback {
+  display: grid;
+  place-items: end start;
+  padding: 1rem;
+  background: linear-gradient(145deg, #1f1f27, #111118);
+}
+
+.ig-fallback span {
+  color: var(--text);
+  font-weight: 700;
+}
+
 .section {
   padding: 5rem 0;
   border-bottom: 1px solid var(--border);
@@ -197,11 +254,73 @@ h2 {
   max-width: 70ch;
 }
 
+.history-timeline {
+  margin: 0.9rem 0 1rem;
+  padding-left: 1rem;
+  color: var(--muted);
+}
+
+.history-timeline li {
+  margin-bottom: 0.55rem;
+  line-height: 1.6;
+}
+
+.history-timeline strong {
+  color: var(--text);
+}
+
 .athletes-grid {
   margin-top: 1.5rem;
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1rem;
+}
+
+.lineage-grid {
+  margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.lineage-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.lineage-badge {
+  width: 46px;
+  height: 46px;
+  border-radius: 999px;
+  display: inline-grid;
+  place-items: center;
+  background: #fff;
+  color: #111;
+  font-weight: 700;
+  margin-bottom: 0.7rem;
+}
+
+.lineage-card h3 {
+  font-size: 1.05rem;
+  margin-bottom: 0.4rem;
+}
+
+.lineage-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.lineage-card .image-hint {
+  margin-top: 0.6rem;
+  font-size: 0.86rem;
+  color: #d8d8df;
+}
+
+.lineage-card-highlight {
+  border-color: #fff;
 }
 
 .athlete-card {
@@ -236,8 +355,16 @@ h2 {
 .athlete-content span {
   display: inline-block;
   margin-top: 0.35rem;
-  color: var(--gold);
+  color: var(--text);
   font-weight: 600;
+}
+
+.athlete-link {
+  display: inline-block;
+  margin-top: 0.6rem;
+  color: var(--text);
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .location {
@@ -251,6 +378,13 @@ h2 {
   overflow-x: auto;
   border: 1px solid var(--border);
   border-radius: 12px;
+}
+
+.schedule-cta-group {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
 }
 
 .schedule-table {
@@ -291,8 +425,12 @@ h2 {
 }
 
 .social-box a:hover {
-  border-color: var(--gold);
-  color: var(--gold);
+  border-color: var(--text);
+  color: var(--text);
+}
+
+.section-cta {
+  margin-top: 1rem;
 }
 
 .contact-item {
@@ -313,7 +451,7 @@ h2 {
 }
 
 .footer-inner a {
-  color: var(--gold);
+  color: var(--text);
   font-weight: 600;
 }
 
@@ -330,8 +468,29 @@ h2 {
   border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
+.direct-float {
+  position: fixed;
+  left: 1rem;
+  bottom: 1rem;
+  z-index: 120;
+  background: #d62976;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 999px;
+  padding: 0.8rem 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
 @media (max-width: 1100px) {
   .athletes-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .lineage-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .instagram-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
@@ -349,6 +508,11 @@ h2 {
     font-size: 0.95rem;
   }
 
+  .main-nav a {
+    flex: 1;
+    text-align: center;
+  }
+
   .grid-2 {
     grid-template-columns: 1fr;
   }
@@ -357,8 +521,21 @@ h2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .instagram-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .hero {
     min-height: 70vh;
+  }
+
+  .cta-outline {
+    margin-left: 0;
+    margin-top: 0.7rem;
+  }
+
+  .schedule-cta-group .cta-button {
+    width: auto;
   }
 }
 
@@ -371,11 +548,33 @@ h2 {
     grid-template-columns: 1fr;
   }
 
+  .lineage-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .instagram-grid {
+    grid-template-columns: 1fr;
+  }
+
   .cta-button {
     width: 100%;
   }
 
   .header-inner .cta-button {
     width: auto;
+  }
+
+  .schedule-cta-group {
+    flex-direction: column;
+  }
+
+  .schedule-cta-group .cta-button {
+    width: 100%;
+  }
+
+  .whatsapp-float,
+  .direct-float {
+    padding: 0.7rem 0.85rem;
+    font-size: 0.9rem;
   }
 }
