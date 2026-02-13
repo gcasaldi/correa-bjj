@@ -2117,3 +2117,62 @@ h2 {
   animation: pulse 2.6s infinite;
   border: 1px solid rgba(255, 255, 255, 0.32);
 }
+
+/* Readability lock: keep wow style but guarantee clear text */
+:root {
+  --text: #f8fbff;
+  --muted: #d6e1f2;
+  --gold: #ffd38a;
+  --gold-dark: #ffb14d;
+  --gold-glow: rgba(255, 211, 138, 0.24);
+}
+
+h1,
+h2 {
+  color: #fff3dd;
+  background: none;
+  -webkit-text-fill-color: currentColor;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
+}
+
+@supports (-webkit-background-clip: text) {
+  h1,
+  h2 {
+    background: linear-gradient(135deg, #fff8ef 0%, #ffd38a 48%, #ffb14d 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: none;
+  }
+}
+
+.eyebrow {
+  color: #ffe0a8;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.4);
+}
+
+.section p,
+.hero-subcopy,
+.section-lead,
+.event-copy,
+.schedule-table td,
+.history-timeline,
+.lineage-card p {
+  color: #d8e3f4;
+}
+
+.schedule-table th {
+  color: #c9eeff;
+}
+
+.main-nav a,
+.footer-inner,
+.social-box a {
+  color: #e3edff;
+}
+
+.main-nav a:hover,
+.footer-inner a:hover,
+.social-box a:hover {
+  color: #ffffff;
+}
