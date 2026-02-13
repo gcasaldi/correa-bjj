@@ -1780,6 +1780,32 @@ body::before {
   }
 }
 
+/* Button readability lock */
+.cta-button,
+.cta-button *,
+.instagram-cta,
+.instagram-cta *,
+.schedule-cta-group .cta-button,
+.instagram-actions .cta-button {
+  -webkit-text-fill-color: currentColor !important;
+  background-clip: border-box !important;
+  -webkit-background-clip: border-box !important;
+  text-shadow: none !important;
+}
+
+.cta-button,
+.instagram-cta {
+  color: #03101f !important;
+}
+
+.cta-outline {
+  color: #d8ecff !important;
+}
+
+.cta-outline:hover {
+  color: #03101f !important;
+}
+
 /* Final Sport Authority Theme (no gold) */
 :root {
   --bg: #f3f4f6;
