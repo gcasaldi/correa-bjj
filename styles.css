@@ -1474,6 +1474,111 @@ body {
   }
 }
 
+/* SPORT LOCK (final override) */
+:root {
+  --bg: #f3f4f6 !important;
+  --bg-alt: #e8ebef !important;
+  --surface: #ffffff !important;
+  --surface-2: #f7f8fa !important;
+  --text: #161a20 !important;
+  --muted: #4b5563 !important;
+  --primary: #c1121f !important;
+  --primary-2: #8f0f18 !important;
+  --accent: #ef4444 !important;
+  --line: rgba(17, 24, 39, 0.14) !important;
+  --line-strong: rgba(17, 24, 39, 0.24) !important;
+}
+
+html,
+body {
+  color: var(--text) !important;
+  background: var(--bg) !important;
+}
+
+body {
+  background:
+    radial-gradient(circle at 92% 10%, rgba(193, 18, 31, 0.18), transparent 30%),
+    radial-gradient(circle at 8% 86%, rgba(239, 68, 68, 0.12), transparent 28%),
+    linear-gradient(180deg, #fcfcfd 0%, #f3f4f6 100%) !important;
+}
+
+.site-header {
+  background: rgba(255, 255, 255, 0.92) !important;
+  border-bottom: 1px solid var(--line) !important;
+}
+
+h1,
+h2,
+.eyebrow,
+.lineage-card h3,
+.instagram-preview h3,
+.location,
+.schedule-table th,
+.history-timeline strong,
+.instagram-icon {
+  color: #b91c1c !important;
+}
+
+@supports (-webkit-background-clip: text) {
+  h1,
+  h2 {
+    background: linear-gradient(140deg, #ef4444 0%, #c1121f 58%, #7f1d1d 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+  }
+}
+
+.main-nav a::after {
+  background: linear-gradient(90deg, #ef4444, #c1121f) !important;
+}
+
+.main-nav a:hover,
+.footer-inner a:hover {
+  color: #c1121f !important;
+}
+
+.cta-button,
+.cta-outline:hover,
+.lineage-badge,
+.instagram-cta,
+.social-box a:hover,
+.direct-float {
+  background: linear-gradient(135deg, #ef4444 0%, #c1121f 58%, #8f0f18 100%) !important;
+  color: #fff !important;
+}
+
+.cta-outline {
+  color: #b91c1c !important;
+  border-color: rgba(193, 18, 31, 0.42) !important;
+  background: rgba(193, 18, 31, 0.05) !important;
+}
+
+.event-pill {
+  border-color: rgba(193, 18, 31, 0.28) !important;
+  background: rgba(193, 18, 31, 0.1) !important;
+  color: #1f2937 !important;
+}
+
+.schedule-table th {
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.18), rgba(193, 18, 31, 0.14)) !important;
+}
+
+.schedule-table tbody tr:hover {
+  background: rgba(193, 18, 31, 0.12) !important;
+}
+
+.lineage-card:hover,
+.event-card:hover,
+.instagram-preview:hover,
+.social-box a:hover,
+.section-image:hover,
+.visual-card:hover,
+.map-frame:hover {
+  border-color: rgba(193, 18, 31, 0.34) !important;
+  box-shadow: 0 24px 44px rgba(17, 24, 39, 0.14), 0 0 0 1px rgba(193, 18, 31, 0.1) !important;
+}
+
 /* Final Sport Authority Theme (no gold) */
 :root {
   --bg: #f3f4f6;
