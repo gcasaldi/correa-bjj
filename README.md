@@ -1,4 +1,4 @@
-# Correa Jiu Jitsu @ Invictus Roma
+# Correa Brazilian JiuJitsu Accademy
 
 Landing page semplice e curata, mobile-first.
 

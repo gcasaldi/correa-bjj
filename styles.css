@@ -1,15 +1,15 @@
 :root {
-  --bg: #0a0a0c;
-  --bg-alt: #0f0f12;
-  --surface: #16161c;
+  --bg: #090909;
+  --bg-alt: #111111;
+  --surface: #171717;
   --text: #ffffff;
-  --muted: #a8a8b3;
-  --gold: #ffd700;
-  --gold-dark: #ffb700;
-  --gold-glow: rgba(255, 215, 0, 0.4);
-  --border: #2a2a33;
+  --muted: #b8b8b8;
+  --gold: #e6e6e6;
+  --gold-dark: #cfcfcf;
+  --gold-glow: rgba(255, 255, 255, 0.2);
+  --border: #2a2a2a;
   --max: 1140px;
-  --accent: #ff6b00;
+  --accent: #8f8f8f;
 }
 
 * {
@@ -26,6 +26,7 @@ body {
   line-height: 1.6;
   scroll-behavior: smooth;
   overflow-x: hidden;
+  letter-spacing: 0.01em;
 }
 
 @keyframes fadeInUp {
@@ -111,8 +112,8 @@ a {
   align-items: center;
   gap: 0.65rem;
   font-family: "Bebas Neue", sans-serif;
-  font-size: 2rem;
-  letter-spacing: 0.04em;
+  font-size: 1.35rem;
+  letter-spacing: 0.03em;
   position: relative;
 }
 
@@ -325,6 +326,7 @@ h2 {
   color: var(--muted);
   line-height: 1.8;
   font-size: 1.05rem;
+  font-weight: 400;
 }
 
 .hero-subcopy {
@@ -334,7 +336,7 @@ h2 {
 }
 
 .section {
-  padding: 7rem 0;
+  padding: 8rem 0;
   border-bottom: 1px solid var(--border);
   position: relative;
 }
@@ -497,7 +499,7 @@ h2 {
 
 .section-image {
   object-fit: cover;
-  filter: brightness(0.9) contrast(1.05);
+  filter: grayscale(100%) saturate(0.2) brightness(0.82) contrast(1.05);
 }
 
 .section-image:hover {
@@ -630,7 +632,7 @@ h2 {
   width: 100%;
   object-fit: cover;
   transition: transform 0.6s ease;
-  filter: brightness(0.9) contrast(1.05);
+  filter: grayscale(100%) saturate(0.15) brightness(0.85) contrast(1.05);
 }
 
 .athlete-card:hover img {
@@ -770,8 +772,179 @@ h2 {
 
 .lineage-card-highlight {
   border-color: var(--gold);
-  background: linear-gradient(135deg, var(--surface) 0%, rgba(255, 215, 0, 0.08) 100%);
-  box-shadow: 0 8px 32px rgba(255, 215, 0, 0.25);
+  background: var(--surface);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+.event-grid {
+  margin-top: 1.8rem;
+}
+
+.event-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 2rem;
+  max-width: 860px;
+}
+
+.event-meta {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.2rem;
+}
+
+.event-pill {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.45rem 0.85rem;
+  color: var(--text);
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.event-copy {
+  max-width: 68ch;
+  margin-bottom: 1.2rem;
+}
+
+.event-cta {
+  margin-top: 0.4rem;
+}
+
+.training-icons {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 1.2rem 0 1.4rem;
+}
+
+.training-icon-card {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.1rem 1.2rem;
+  background: var(--surface);
+}
+
+.training-icon {
+  display: inline-grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  font-size: 0.65rem;
+  border: 1px solid var(--gold);
+  border-radius: 50%;
+  color: var(--gold);
+  margin-bottom: 0.6rem;
+}
+
+.training-icon-card h3 {
+  font-size: 1rem;
+  margin-bottom: 0.2rem;
+}
+
+.training-icon-card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+/* Minimal style override: cleaner and less glow-heavy */
+.site-header {
+  background: rgba(9, 9, 9, 0.94);
+  box-shadow: none;
+}
+
+.hero-video {
+  filter: grayscale(100%) saturate(0.25) brightness(0.46) contrast(1.03);
+}
+
+.hero-overlay {
+  background: linear-gradient(140deg, rgba(9, 9, 9, 0.92) 0%, rgba(9, 9, 9, 0.62) 100%);
+}
+
+.section::before,
+.section-alt::after,
+.logo::after,
+.main-nav a::after,
+.cta-button::before,
+.visual-card::before,
+.instagram-preview::before,
+.site-footer::before {
+  display: none;
+}
+
+h1,
+h2 {
+  font-family: "Montserrat", sans-serif;
+  background: none;
+  -webkit-text-fill-color: currentColor;
+  color: var(--text);
+  letter-spacing: 0.01em;
+}
+
+h1 {
+  font-size: clamp(2.2rem, 5vw, 4.2rem);
+  text-shadow: none;
+}
+
+h2 {
+  font-size: clamp(1.7rem, 3.5vw, 2.7rem);
+}
+
+.eyebrow {
+  color: #d5d5d5;
+  text-shadow: none;
+  font-weight: 600;
+}
+
+.cta-button {
+  border-radius: 10px;
+  background: #ededed;
+  color: #0b0b0b;
+  border: 1px solid #ededed;
+  box-shadow: none;
+}
+
+.cta-button:hover {
+  transform: translateY(-1px);
+  box-shadow: none;
+}
+
+.cta-outline {
+  background: transparent;
+  color: #ededed;
+  border: 1px solid #ededed;
+}
+
+.cta-outline:hover {
+  background: #ededed;
+  color: #0b0b0b;
+}
+
+.lineage-card,
+.athlete-card,
+.schedule-wrap,
+.instagram-preview,
+.social-box a,
+.visual-card,
+.map-frame,
+.section-image {
+  border-radius: 12px;
+  box-shadow: none;
+}
+
+.lineage-card:hover,
+.athlete-card:hover,
+.visual-card:hover,
+.section-image:hover,
+.social-box a:hover,
+.instagram-preview:hover {
+  transform: translateY(-2px);
+  box-shadow: none;
 }
 
 .location {
@@ -992,6 +1165,10 @@ h2 {
     font-size: 0.95rem;
   }
 
+  .logo {
+    font-size: 1.1rem;
+  }
+
   .main-nav a {
     flex: 1;
     text-align: center;
@@ -1029,6 +1206,10 @@ h2 {
   }
 
   .lineage-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .training-icons {
     grid-template-columns: 1fr;
   }
 
