@@ -706,3 +706,159 @@ h2 {
     transition: none !important;
   }
 }
+
+/* ATOS-inspired refinement: dark-neutral base, blue as accent only */
+:root {
+  --bg: #090b10;
+  --bg-alt: #0f131b;
+  --surface: #151b26;
+  --surface-2: #1b2433;
+  --text: #f4f7fb;
+  --muted: #b9c1cd;
+  --primary: #4ea8e8;
+  --primary-2: #2f84c4;
+  --accent: #6ab8ef;
+  --line: rgba(255, 255, 255, 0.12);
+  --line-strong: rgba(255, 255, 255, 0.22);
+}
+
+body {
+  background:
+    radial-gradient(circle at 92% 12%, rgba(78, 168, 232, 0.16), transparent 30%),
+    radial-gradient(circle at 8% 88%, rgba(78, 168, 232, 0.08), transparent 26%),
+    linear-gradient(165deg, #090b10 0%, #0d1219 56%, #0f141d 100%);
+}
+
+body::before {
+  background:
+    radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.045), transparent 24%),
+    radial-gradient(circle at 78% 18%, rgba(78, 168, 232, 0.08), transparent 22%);
+}
+
+.site-header {
+  background: rgba(10, 13, 19, 0.82);
+  border-bottom: 1px solid var(--line);
+}
+
+.main-nav {
+  color: #c4ccd7;
+}
+
+.main-nav a::after {
+  background: linear-gradient(90deg, #f2f5fa, var(--primary));
+}
+
+.hero-overlay {
+  background: linear-gradient(
+    130deg,
+    rgba(7, 9, 13, 0.84) 0%,
+    rgba(11, 15, 22, 0.76) 58%,
+    rgba(78, 168, 232, 0.16) 100%
+  );
+}
+
+.hero-content {
+  background: linear-gradient(135deg, rgba(15, 20, 29, 0.76), rgba(15, 20, 29, 0.44));
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  box-shadow: 0 24px 56px rgba(0, 0, 0, 0.56);
+}
+
+h1,
+h2 {
+  color: #f7f9fc;
+}
+
+@supports (-webkit-background-clip: text) {
+  h1,
+  h2 {
+    background: linear-gradient(140deg, #ffffff 0%, #ecf1f8 56%, #c7d8ea 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+.eyebrow {
+  color: #d4dde8;
+}
+
+.cta-button {
+  background: linear-gradient(135deg, #f7f9fc 0%, #dde6f1 100%);
+  color: #0b121b;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
+}
+
+.cta-button:hover {
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.44);
+}
+
+.cta-outline {
+  color: #e6edf6;
+  border-color: rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.cta-outline:hover {
+  background: #e7edf6;
+  color: #0a121b;
+}
+
+.section-alt {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(78, 168, 232, 0.03)),
+    var(--bg-alt);
+}
+
+.visual-card,
+.lineage-card,
+.event-card,
+.instagram-preview,
+.schedule-wrap,
+.social-box a,
+.section-image,
+.map-frame {
+  border-color: var(--line);
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.025), rgba(255, 255, 255, 0));
+}
+
+.lineage-card:hover,
+.event-card:hover,
+.instagram-preview:hover,
+.social-box a:hover,
+.section-image:hover,
+.visual-card:hover {
+  border-color: rgba(78, 168, 232, 0.42);
+}
+
+.lineage-badge,
+.instagram-cta {
+  background: linear-gradient(135deg, #d8e6f5 0%, #95c7ec 54%, #5da8de 100%);
+  color: #0b121b;
+}
+
+.event-pill {
+  color: #d7e2f0;
+  border-color: rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.schedule-table {
+  background: linear-gradient(180deg, rgba(19, 24, 34, 0.96), rgba(14, 20, 29, 0.96));
+}
+
+.schedule-table th {
+  color: #dae4f2;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.09), rgba(78, 168, 232, 0.12));
+}
+
+.schedule-table tbody tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.schedule-table tbody tr:hover {
+  background: rgba(78, 168, 232, 0.12);
+}
+
+.footer-inner a {
+  color: #dce8f5;
+}
