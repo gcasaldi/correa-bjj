@@ -452,6 +452,10 @@ h2 {
   background-clip: text;
 }
 
+.instagram-handle {
+  text-decoration: none;
+}
+
 .instagram-preview p {
   color: var(--muted);
   font-size: 1.1rem;
