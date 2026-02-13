@@ -1473,3 +1473,299 @@ body {
     transform: none !important;
   }
 }
+
+/* Gold typography refinement (remove red dominance) */
+:root {
+  --primary: #d4a650;
+  --primary-2: #b8862f;
+  --accent: #f0c978;
+}
+
+body {
+  background:
+    radial-gradient(circle at 92% 12%, rgba(212, 166, 80, 0.14), transparent 28%),
+    radial-gradient(circle at 8% 86%, rgba(240, 201, 120, 0.08), transparent 24%),
+    linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+}
+
+body::before {
+  background:
+    radial-gradient(circle at 18% 20%, rgba(255, 255, 255, 0.75), transparent 24%),
+    radial-gradient(circle at 80% 16%, rgba(212, 166, 80, 0.07), transparent 20%);
+}
+
+.hero-overlay {
+  background: linear-gradient(
+    125deg,
+    rgba(255, 255, 255, 0.88) 0%,
+    rgba(255, 255, 255, 0.72) 52%,
+    rgba(212, 166, 80, 0.13) 100%
+  );
+}
+
+h1,
+h2,
+.eyebrow,
+.lineage-card h3,
+.instagram-preview h3,
+.location,
+.schedule-table th,
+.history-timeline strong {
+  color: #b8862f;
+}
+
+@supports (-webkit-background-clip: text) {
+  h1,
+  h2 {
+    background: linear-gradient(140deg, #f0c978 0%, #d4a650 55%, #b8862f 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+.main-nav a::after {
+  background: linear-gradient(90deg, #f0c978, #b8862f);
+}
+
+.main-nav a:hover,
+.footer-inner a:hover {
+  color: #b8862f;
+}
+
+.cta-button,
+.cta-outline:hover,
+.lineage-badge,
+.instagram-cta,
+.social-box a:hover,
+.direct-float {
+  background: linear-gradient(135deg, #f0c978 0%, #d4a650 58%, #b8862f 100%);
+}
+
+.cta-outline {
+  color: #b8862f;
+  border-color: rgba(184, 134, 47, 0.45);
+  background: rgba(212, 166, 80, 0.06);
+}
+
+.event-pill {
+  border-color: rgba(184, 134, 47, 0.28);
+  background: rgba(212, 166, 80, 0.1);
+}
+
+.schedule-table th {
+  background: linear-gradient(135deg, rgba(240, 201, 120, 0.2), rgba(212, 166, 80, 0.16));
+}
+
+.schedule-table tbody tr:hover {
+  background: rgba(212, 166, 80, 0.1);
+}
+
+.lineage-card:hover,
+.event-card:hover,
+.instagram-preview:hover,
+.social-box a:hover,
+.section-image:hover,
+.visual-card:hover,
+.map-frame:hover {
+  border-color: rgba(184, 134, 47, 0.34);
+  box-shadow: 0 24px 44px rgba(15, 23, 42, 0.14), 0 0 0 1px rgba(184, 134, 47, 0.1);
+}
+
+.instagram-icon {
+  color: #b8862f;
+}
+
+/* Luxe Light Gold Master */
+:root {
+  --bg: #f6f2ea;
+  --bg-alt: #efe8dc;
+  --surface: #fffdf9;
+  --surface-2: #faf5ec;
+  --text: #18140f;
+  --muted: #5f5345;
+  --primary: #c89a42;
+  --primary-2: #a8742f;
+  --accent: #efd08b;
+  --line: rgba(88, 62, 31, 0.16);
+  --line-strong: rgba(88, 62, 31, 0.26);
+}
+
+html,
+body {
+  color: var(--text);
+  background: var(--bg);
+}
+
+body {
+  background:
+    radial-gradient(circle at 92% 10%, rgba(200, 154, 66, 0.22), transparent 32%),
+    radial-gradient(circle at 8% 86%, rgba(239, 208, 139, 0.16), transparent 30%),
+    linear-gradient(180deg, #fffdf8 0%, #f6f1e8 100%);
+}
+
+body::before {
+  background:
+    radial-gradient(circle at 18% 18%, rgba(255, 255, 255, 0.9), transparent 26%),
+    radial-gradient(circle at 80% 16%, rgba(200, 154, 66, 0.12), transparent 24%);
+}
+
+.site-header {
+  background: rgba(255, 252, 246, 0.86);
+  box-shadow: 0 10px 30px rgba(53, 36, 14, 0.1);
+}
+
+.hero-overlay {
+  background:
+    linear-gradient(
+      125deg,
+      rgba(255, 252, 246, 0.86) 0%,
+      rgba(255, 252, 246, 0.62) 52%,
+      rgba(200, 154, 66, 0.2) 100%
+    );
+}
+
+.hero-content {
+  background: linear-gradient(135deg, rgba(255, 254, 250, 0.92), rgba(252, 247, 238, 0.78));
+  border: 1px solid rgba(88, 62, 31, 0.14);
+  box-shadow: 0 30px 62px rgba(53, 36, 14, 0.16);
+}
+
+h1,
+h2,
+.eyebrow,
+.lineage-card h3,
+.instagram-preview h3,
+.location,
+.schedule-table th,
+.history-timeline strong {
+  color: #9b6a1e;
+}
+
+@supports (-webkit-background-clip: text) {
+  h1,
+  h2 {
+    background: linear-gradient(140deg, #f3d694 0%, #c89a42 55%, #9b6a1e 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+.hero-subcopy,
+.section p,
+.section-lead,
+.event-copy,
+.history-timeline,
+.schedule-table td,
+.instagram-preview p {
+  color: #5f5345;
+}
+
+.section-alt {
+  background:
+    linear-gradient(180deg, rgba(200, 154, 66, 0.08), rgba(239, 208, 139, 0.06)),
+    var(--bg-alt);
+}
+
+.visual-card,
+.lineage-card,
+.event-card,
+.instagram-preview,
+.schedule-wrap,
+.social-box a,
+.section-image,
+.map-frame {
+  border-color: rgba(88, 62, 31, 0.14);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(250, 245, 236, 0.98));
+  box-shadow: 0 20px 38px rgba(53, 36, 14, 0.12);
+}
+
+.cta-button,
+.cta-outline:hover,
+.lineage-badge,
+.instagram-cta,
+.social-box a:hover,
+.direct-float {
+  background: linear-gradient(135deg, #f3d694 0%, #c89a42 58%, #9b6a1e 100%);
+  color: #1c140a;
+}
+
+.cta-button {
+  box-shadow: 0 14px 28px rgba(155, 106, 30, 0.28);
+}
+
+.cta-button:hover {
+  box-shadow: 0 18px 38px rgba(155, 106, 30, 0.35);
+}
+
+.cta-outline {
+  color: #9b6a1e;
+  border-color: rgba(155, 106, 30, 0.46);
+  background: rgba(200, 154, 66, 0.08);
+}
+
+.main-nav a::after {
+  background: linear-gradient(90deg, #f3d694, #9b6a1e);
+}
+
+.main-nav a:hover,
+.footer-inner a:hover {
+  color: #9b6a1e;
+}
+
+.lineage-card:hover,
+.event-card:hover,
+.instagram-preview:hover,
+.social-box a:hover,
+.section-image:hover,
+.visual-card:hover,
+.map-frame:hover {
+  border-color: rgba(155, 106, 30, 0.35);
+  box-shadow: 0 28px 50px rgba(53, 36, 14, 0.16), 0 0 0 1px rgba(155, 106, 30, 0.12);
+}
+
+.event-pill {
+  color: #493520;
+  border-color: rgba(155, 106, 30, 0.3);
+  background: rgba(200, 154, 66, 0.12);
+}
+
+.schedule-table {
+  background: rgba(255, 255, 255, 0.98);
+}
+
+.schedule-table th {
+  background: linear-gradient(135deg, rgba(243, 214, 148, 0.42), rgba(200, 154, 66, 0.22));
+}
+
+.schedule-table tbody tr:nth-child(even) {
+  background: rgba(88, 62, 31, 0.03);
+}
+
+.schedule-table tbody tr:hover {
+  background: rgba(200, 154, 66, 0.14);
+}
+
+.site-footer {
+  background: linear-gradient(180deg, #f7f1e6, #ece2d3);
+  border-top: 1px solid rgba(88, 62, 31, 0.12);
+}
+
+.instagram-icon {
+  color: #9b6a1e;
+  filter: drop-shadow(0 5px 12px rgba(155, 106, 30, 0.25));
+}
+
+.lineage-badge {
+  box-shadow: 0 8px 22px rgba(155, 106, 30, 0.28);
+}
+
+.whatsapp-float,
+.direct-float {
+  border: 1px solid rgba(255, 255, 255, 0.95);
+}
+
+.hero-content:hover {
+  box-shadow: 0 42px 80px rgba(53, 36, 14, 0.2), 0 0 0 1px rgba(155, 106, 30, 0.18);
+}
