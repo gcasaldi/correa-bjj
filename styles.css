@@ -1919,3 +1919,201 @@ h2 {
   animation: pulse 2.8s infinite;
   backdrop-filter: blur(3px);
 }
+
+/* FINAL WOW THEME: vibrant, dynamic, non-dark */
+@keyframes wowGradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes wowBlobFloat {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+  50% { transform: translate3d(0, -16px, 0) scale(1.04); }
+}
+
+:root {
+  --bg: #101827;
+  --bg-alt: #18243a;
+  --surface: #22304b;
+  --text: #f5f8ff;
+  --muted: #c6d3ea;
+  --gold: #ffba5a;
+  --gold-dark: #ff8d3a;
+  --gold-glow: rgba(255, 186, 90, 0.32);
+  --border: rgba(111, 190, 255, 0.3);
+  --accent: #58d0ff;
+}
+
+body {
+  background:
+    radial-gradient(circle at 10% 12%, rgba(88, 208, 255, 0.26), transparent 34%),
+    radial-gradient(circle at 88% 18%, rgba(255, 141, 58, 0.22), transparent 33%),
+    radial-gradient(circle at 50% 100%, rgba(255, 186, 90, 0.2), transparent 48%),
+    linear-gradient(160deg, #101827 0%, #172746 50%, #162033 100%);
+  background-size: 140% 140%;
+  animation: wowGradientShift 16s ease infinite;
+}
+
+body::before {
+  opacity: 1;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(88, 208, 255, 0.2), transparent 30%),
+    radial-gradient(circle at 80% 24%, rgba(255, 141, 58, 0.18), transparent 28%),
+    radial-gradient(circle at 50% 85%, rgba(255, 186, 90, 0.14), transparent 35%);
+  animation: wowBlobFloat 9s ease-in-out infinite;
+}
+
+.site-header {
+  background: rgba(20, 30, 52, 0.78);
+  border-bottom: 1px solid rgba(88, 208, 255, 0.32);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.32);
+}
+
+.main-nav a:hover {
+  color: #ffffff;
+  text-shadow: 0 0 12px rgba(88, 208, 255, 0.5);
+}
+
+.hero-overlay {
+  background: linear-gradient(
+    130deg,
+    rgba(11, 18, 31, 0.72) 0%,
+    rgba(18, 31, 55, 0.62) 42%,
+    rgba(88, 208, 255, 0.2) 72%,
+    rgba(255, 141, 58, 0.18) 100%
+  );
+}
+
+.hero-content {
+  background: linear-gradient(135deg, rgba(17, 28, 49, 0.72), rgba(20, 33, 56, 0.36));
+  border: 1px solid rgba(88, 208, 255, 0.26);
+  box-shadow: 0 20px 46px rgba(0, 0, 0, 0.36), 0 0 32px rgba(88, 208, 255, 0.14);
+}
+
+h1,
+h2 {
+  background: linear-gradient(135deg, #ffffff 0%, #8be3ff 45%, #ffc979 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.eyebrow {
+  color: #9de8ff;
+  text-shadow: 0 0 12px rgba(88, 208, 255, 0.3);
+}
+
+.cta-button {
+  background: linear-gradient(135deg, #ffd68a 0%, #ffad4f 50%, #ff8d3a 100%);
+  color: #23160a;
+  box-shadow: 0 10px 24px rgba(255, 141, 58, 0.4);
+}
+
+.cta-button:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 14px 34px rgba(255, 141, 58, 0.5), 0 0 18px rgba(255, 186, 90, 0.38);
+}
+
+.cta-outline {
+  color: #9de8ff;
+  border-color: #6fd5ff;
+  background: rgba(88, 208, 255, 0.08);
+}
+
+.cta-outline:hover {
+  background: linear-gradient(135deg, #8be3ff, #58d0ff);
+  color: #0a1726;
+}
+
+.section-alt {
+  background:
+    linear-gradient(180deg, rgba(88, 208, 255, 0.08), rgba(255, 141, 58, 0.07)),
+    var(--bg-alt);
+}
+
+.lineage-card,
+.athlete-card,
+.event-card,
+.visual-card,
+.instagram-preview,
+.schedule-wrap,
+.map-frame,
+.section-image {
+  border: 1px solid rgba(88, 208, 255, 0.28);
+  background-image: linear-gradient(180deg, rgba(88, 208, 255, 0.08), rgba(255, 186, 90, 0.05));
+  box-shadow: 0 14px 30px rgba(8, 14, 24, 0.34);
+}
+
+.lineage-card:hover,
+.athlete-card:hover,
+.event-card:hover,
+.instagram-preview:hover,
+.visual-card:hover,
+.section-image:hover {
+  transform: translateY(-6px);
+  border-color: rgba(255, 186, 90, 0.55);
+  box-shadow: 0 18px 36px rgba(8, 14, 24, 0.42), 0 0 22px rgba(88, 208, 255, 0.2);
+}
+
+.lineage-badge {
+  background: linear-gradient(135deg, #ffe2ad 0%, #ffba5a 45%, #ff8d3a 100%);
+  box-shadow: 0 8px 18px rgba(255, 141, 58, 0.35);
+}
+
+.event-pill {
+  color: #d9f3ff;
+  border-color: rgba(88, 208, 255, 0.36);
+  background: rgba(88, 208, 255, 0.08);
+}
+
+.schedule-wrap {
+  border-color: rgba(88, 208, 255, 0.42);
+}
+
+.schedule-table {
+  background: linear-gradient(180deg, rgba(33, 49, 77, 0.95), rgba(25, 39, 64, 0.95));
+}
+
+.schedule-table th {
+  color: #9de8ff;
+  background: linear-gradient(135deg, rgba(88, 208, 255, 0.2), rgba(255, 141, 58, 0.13));
+}
+
+.schedule-table tbody tr:nth-child(even) {
+  background: rgba(88, 208, 255, 0.06);
+}
+
+.schedule-table tbody tr:hover {
+  transform: translateX(5px);
+  background: rgba(255, 186, 90, 0.12);
+}
+
+.social-box a {
+  border-color: rgba(88, 208, 255, 0.36);
+  background: linear-gradient(135deg, rgba(88, 208, 255, 0.1), rgba(255, 141, 58, 0.06));
+}
+
+.social-box a:hover {
+  box-shadow: 0 10px 24px rgba(88, 208, 255, 0.24);
+}
+
+.site-footer {
+  background: linear-gradient(180deg, #141f33, #101827);
+  border-top: 1px solid rgba(88, 208, 255, 0.3);
+}
+
+.footer-inner a {
+  color: #9de8ff;
+}
+
+.footer-inner a:hover {
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(88, 208, 255, 0.32);
+}
+
+.whatsapp-float,
+.direct-float {
+  animation: pulse 2.6s infinite;
+  border: 1px solid rgba(255, 255, 255, 0.32);
+}
