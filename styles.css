@@ -1579,6 +1579,207 @@ h2,
   box-shadow: 0 24px 44px rgba(17, 24, 39, 0.14), 0 0 0 1px rgba(193, 18, 31, 0.1) !important;
 }
 
+/* ULTIMATE BLUE DYNASTY LOCK */
+@keyframes blueBgFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes blueTextFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+:root {
+  --bg: #05080f !important;
+  --bg-alt: #0b1324 !important;
+  --surface: #101a30 !important;
+  --surface-2: #13213c !important;
+  --text: #d9ecff !important;
+  --muted: #a8c5e6 !important;
+  --primary: #3ea5ff !important;
+  --primary-2: #2563eb !important;
+  --accent: #60c4ff !important;
+  --line: rgba(96, 196, 255, 0.26) !important;
+  --line-strong: rgba(96, 196, 255, 0.42) !important;
+}
+
+html,
+body {
+  background: var(--bg) !important;
+  color: var(--text) !important;
+}
+
+body {
+  background:
+    radial-gradient(circle at 10% 12%, rgba(37, 99, 235, 0.22), transparent 34%),
+    radial-gradient(circle at 88% 18%, rgba(96, 196, 255, 0.2), transparent 32%),
+    radial-gradient(circle at 48% 100%, rgba(62, 165, 255, 0.14), transparent 46%),
+    linear-gradient(160deg, #05080f 0%, #0b1324 54%, #0f1b33 100%) !important;
+  background-size: 180% 180% !important;
+  animation: blueBgFlow 18s ease infinite !important;
+}
+
+body::before {
+  background:
+    radial-gradient(circle at 22% 24%, rgba(96, 196, 255, 0.14), transparent 26%),
+    radial-gradient(circle at 76% 20%, rgba(37, 99, 235, 0.16), transparent 24%) !important;
+}
+
+.site-header {
+  background: rgba(7, 12, 24, 0.82) !important;
+  border-bottom: 1px solid var(--line) !important;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4) !important;
+}
+
+.hero-overlay {
+  background: linear-gradient(
+    130deg,
+    rgba(4, 7, 13, 0.86) 0%,
+    rgba(8, 13, 25, 0.72) 50%,
+    rgba(37, 99, 235, 0.2) 100%
+  ) !important;
+  background-size: 180% 180% !important;
+  animation: blueBgFlow 12s ease infinite !important;
+}
+
+.hero-content,
+.visual-card,
+.lineage-card,
+.event-card,
+.instagram-preview,
+.schedule-wrap,
+.social-box a,
+.section-image,
+.map-frame {
+  background: linear-gradient(170deg, rgba(16, 26, 48, 0.9), rgba(10, 19, 36, 0.9)) !important;
+  border-color: var(--line) !important;
+  box-shadow: 0 20px 44px rgba(0, 0, 0, 0.45) !important;
+}
+
+.lineage-card:hover,
+.event-card:hover,
+.instagram-preview:hover,
+.social-box a:hover,
+.section-image:hover,
+.visual-card:hover,
+.map-frame:hover {
+  border-color: var(--line-strong) !important;
+  box-shadow: 0 28px 54px rgba(0, 0, 0, 0.54), 0 0 0 1px rgba(96, 196, 255, 0.2) !important;
+}
+
+.main-nav,
+.hero-subcopy,
+.section p,
+.section-lead,
+.event-copy,
+.history-timeline,
+.schedule-table td,
+.instagram-preview p,
+.footer-inner,
+.social-box a,
+.event-pill,
+.location {
+  color: #b5d2ef !important;
+}
+
+@supports (-webkit-background-clip: text) {
+  h1,
+  h2,
+  h3,
+  p,
+  li,
+  span,
+  a,
+  th,
+  td,
+  .eyebrow,
+  .section-lead,
+  .event-copy,
+  .history-timeline strong,
+  .instagram-handle,
+  .location,
+  .instagram-icon,
+  .footer-inner,
+  .main-nav a {
+    background: linear-gradient(135deg, #e8f4ff 0%, #8bd3ff 40%, #3ea5ff 70%, #2563eb 100%) !important;
+    background-size: 220% 220% !important;
+    animation: blueTextFlow 8s ease infinite !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+  }
+}
+
+.cta-button,
+.cta-outline:hover,
+.lineage-badge,
+.instagram-cta,
+.direct-float {
+  background: linear-gradient(135deg, #8bd3ff 0%, #3ea5ff 52%, #2563eb 100%) !important;
+  color: #03101f !important;
+  border-color: rgba(139, 211, 255, 0.45) !important;
+  box-shadow: 0 14px 30px rgba(37, 99, 235, 0.38) !important;
+}
+
+.cta-outline {
+  background: rgba(62, 165, 255, 0.08) !important;
+  color: #9fd9ff !important;
+  border-color: rgba(96, 196, 255, 0.5) !important;
+}
+
+.main-nav a::after {
+  background: linear-gradient(90deg, #8bd3ff, #2563eb) !important;
+}
+
+.schedule-table {
+  background: linear-gradient(180deg, rgba(11, 19, 36, 0.96), rgba(8, 14, 28, 0.96)) !important;
+}
+
+.schedule-table th {
+  background: linear-gradient(135deg, rgba(96, 196, 255, 0.22), rgba(37, 99, 235, 0.16)) !important;
+}
+
+.schedule-table tbody tr:nth-child(even) {
+  background: rgba(96, 196, 255, 0.06) !important;
+}
+
+.schedule-table tbody tr:hover {
+  background: rgba(96, 196, 255, 0.16) !important;
+}
+
+.site-footer {
+  background: linear-gradient(180deg, #0a1224, #070d1a) !important;
+  border-top: 1px solid var(--line) !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body,
+  .hero-overlay,
+  h1,
+  h2,
+  h3,
+  p,
+  li,
+  span,
+  a,
+  th,
+  td,
+  .eyebrow,
+  .section-lead,
+  .event-copy,
+  .history-timeline strong,
+  .instagram-handle,
+  .location,
+  .instagram-icon,
+  .footer-inner,
+  .main-nav a {
+    animation: none !important;
+  }
+}
+
 /* Final Sport Authority Theme (no gold) */
 :root {
   --bg: #f3f4f6;
