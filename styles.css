@@ -1239,3 +1239,329 @@ h2 {
     font-size: 0.9rem;
   }
 }
+
+/* WOW effects restoration and enhancement */
+@keyframes floatGlow {
+  0%,
+  100% {
+    transform: translateY(0);
+    box-shadow: 0 12px 36px rgba(255, 255, 255, 0.12);
+  }
+  50% {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 50px rgba(255, 255, 255, 0.2);
+  }
+}
+
+@keyframes softShine {
+  0% {
+    transform: translateX(-120%);
+  }
+  100% {
+    transform: translateX(120%);
+  }
+}
+
+.site-header {
+  background: rgba(10, 10, 12, 0.92);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+}
+
+.section::before,
+.section-alt::after,
+.logo::after,
+.main-nav a::after,
+.cta-button::before,
+.visual-card::before,
+.instagram-preview::before,
+.site-footer::before {
+  display: block;
+}
+
+h1,
+h2 {
+  font-family: "Bebas Neue", sans-serif;
+  background: linear-gradient(135deg, #ffffff 0%, #d4d4d8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: 0.03em;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 6vw, 5.5rem);
+  text-shadow: 0 4px 20px rgba(255, 255, 255, 0.15);
+}
+
+h2 {
+  font-size: clamp(2rem, 5vw, 3.8rem);
+}
+
+.eyebrow {
+  color: var(--gold);
+  text-shadow: 0 0 20px var(--gold-glow);
+  font-weight: 700;
+}
+
+.hero-overlay {
+  background: linear-gradient(
+    135deg,
+    rgba(10, 10, 12, 0.95) 0%,
+    rgba(10, 10, 12, 0.72) 48%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 70% 30%, rgba(255, 255, 255, 0.12), transparent 45%);
+  pointer-events: none;
+}
+
+.cta-button {
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+  color: #000;
+  border: 2px solid transparent;
+  box-shadow: 0 4px 16px rgba(255, 255, 255, 0.24);
+}
+
+.cta-button:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(255, 255, 255, 0.3);
+}
+
+.cta-outline {
+  background: transparent;
+  color: var(--gold);
+  border: 2px solid var(--gold);
+}
+
+.cta-outline:hover {
+  background: var(--gold);
+  color: #000;
+}
+
+.lineage-card,
+.athlete-card,
+.schedule-wrap,
+.instagram-preview,
+.visual-card,
+.map-frame,
+.section-image {
+  border-radius: 18px;
+  box-shadow: 0 10px 36px rgba(0, 0, 0, 0.45);
+}
+
+.lineage-card,
+.athlete-card,
+.event-card,
+.instagram-preview,
+.social-box a {
+  position: relative;
+  overflow: hidden;
+}
+
+.lineage-card::after,
+.athlete-card::after,
+.event-card::after,
+.social-box a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(110deg, transparent 0%, rgba(255, 255, 255, 0.17) 45%, transparent 100%);
+  transform: translateX(-140%);
+  pointer-events: none;
+}
+
+.lineage-card:hover::after,
+.athlete-card:hover::after,
+.event-card:hover::after,
+.social-box a:hover::after {
+  animation: softShine 0.9s ease;
+}
+
+.lineage-card:hover,
+.athlete-card:hover,
+.visual-card:hover,
+.section-image:hover,
+.social-box a:hover,
+.instagram-preview:hover,
+.event-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 44px rgba(255, 255, 255, 0.14), 0 18px 54px rgba(0, 0, 0, 0.5);
+}
+
+.event-card {
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.event-card:hover {
+  border-color: var(--gold);
+}
+
+.schedule-wrap {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
+}
+
+.schedule-table tbody tr {
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.schedule-table tbody tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.schedule-table tbody tr:hover {
+  transform: translateX(6px);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.whatsapp-float,
+.direct-float {
+  animation: pulse 2.2s infinite, floatGlow 3.2s ease-in-out infinite;
+}
+
+.direct-float {
+  animation-delay: 0.8s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Style-only cinematic polish */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    radial-gradient(circle at 15% 15%, rgba(255, 255, 255, 0.06), transparent 32%),
+    radial-gradient(circle at 85% 20%, rgba(255, 255, 255, 0.04), transparent 30%),
+    radial-gradient(circle at 50% 85%, rgba(255, 255, 255, 0.03), transparent 35%);
+}
+
+.site-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 10px 34px rgba(0, 0, 0, 0.5);
+}
+
+.main-nav a {
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.main-nav a:hover {
+  text-shadow: 0 0 14px rgba(255, 255, 255, 0.35);
+}
+
+.hero-video {
+  transform: scale(1.03);
+}
+
+.hero-content {
+  background: linear-gradient(135deg, rgba(10, 10, 12, 0.58), rgba(10, 10, 12, 0.25));
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 24px;
+  backdrop-filter: blur(8px);
+  padding: 2.2rem;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+}
+
+.section {
+  position: relative;
+  z-index: 1;
+}
+
+.section::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.26), transparent);
+  opacity: 0.35;
+}
+
+.lineage-card,
+.athlete-card,
+.event-card,
+.visual-card,
+.instagram-preview,
+.schedule-wrap {
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0));
+}
+
+.lineage-card:hover,
+.athlete-card:hover,
+.event-card:hover,
+.instagram-preview:hover,
+.visual-card:hover {
+  border-color: rgba(255, 255, 255, 0.36);
+}
+
+.lineage-badge {
+  box-shadow: 0 8px 22px rgba(255, 255, 255, 0.24);
+}
+
+.event-pill {
+  border-color: rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.schedule-table th {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.04));
+}
+
+.schedule-table td {
+  backdrop-filter: blur(1px);
+}
+
+.schedule-cta-group .cta-button {
+  min-width: 220px;
+}
+
+.social-box a {
+  border-color: rgba(255, 255, 255, 0.22);
+}
+
+.social-box a:hover {
+  box-shadow: 0 12px 30px rgba(255, 255, 255, 0.2);
+}
+
+.map-frame {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.55);
+}
+
+.footer-inner a:hover {
+  color: #fff;
+}
+
+.whatsapp-float,
+.direct-float {
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(4px);
+}
+
+@media (max-width: 820px) {
+  .hero-content {
+    padding: 1.3rem;
+    border-radius: 16px;
+  }
+}
