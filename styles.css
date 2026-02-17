@@ -1474,6 +1474,21 @@ body {
   }
 }
 
+/* WhatsApp button: green + readable text */
+.whatsapp-float {
+  background: linear-gradient(135deg, #25d366 0%, #1fb857 100%) !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  border-color: #1da851 !important;
+  text-shadow: none !important;
+}
+
+.whatsapp-float:hover {
+  background: linear-gradient(135deg, #22c35f 0%, #189a49 100%) !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
 /* Final CTA readability fix */
 .cta-button,
 .cta-button *,
