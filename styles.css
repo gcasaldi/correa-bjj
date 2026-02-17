@@ -1474,6 +1474,25 @@ body {
   }
 }
 
+/* Final CTA readability fix */
+.cta-button,
+.cta-button *,
+.cta-outline,
+.cta-outline *,
+.instagram-cta,
+.instagram-cta *,
+.footer-inner a,
+.whatsapp-float,
+.direct-float {
+  color: #1d1409 !important;
+  -webkit-text-fill-color: currentColor !important;
+  text-shadow: none !important;
+}
+
+.cta-outline {
+  color: #9a6a22 !important;
+}
+
 /* SPORT LOCK (final override) */
 :root {
   --bg: #f3f4f6 !important;
