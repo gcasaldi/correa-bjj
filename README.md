@@ -11,8 +11,7 @@ Landing page semplice e curata, mobile-first.
 
 - Instagram scuola: `https://www.instagram.com/correajiujitsu/`
 - Facebook scuola: `https://www.facebook.com/correajiujitsu`
-- Atleta: Giordano `@giordano_bjj`
-- Atleta: Giulia Casaldi `@giuliacasal`
+
 
 ## Cosa personalizzare subito
 
